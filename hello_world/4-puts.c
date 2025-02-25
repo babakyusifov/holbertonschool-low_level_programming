@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - puts command
+ * main - prints a string
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-char yaz[]="\"Programming is like building a multilingual puzzle\";
+char yaz[] = "Programming is like building a multilingual puzzle\n";
 
-	puts(yaz);
+puts(yaz);
 
 return (0);
 }
