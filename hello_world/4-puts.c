@@ -1,10 +1,13 @@
 #include <stdio.h>
-/*
- * main puts command
+
+/**
+ * main - puts command
  */
 int main(void)
 {
-char yaz[10] =" Programming is like building a multilingual puzzle\n";
+char yaz[] = "Programming is like building a multilingual puzzle\n";
+
 	puts(yaz);
-return 0;
+
+return (0);
 }
