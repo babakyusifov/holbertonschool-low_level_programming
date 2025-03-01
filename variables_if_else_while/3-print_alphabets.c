@@ -13,6 +13,8 @@ for (; kh <= 'z' ; kh++)
 for (; bh <= 'Z' ; bh++)
 {
 putchar(kh);
+}
+{
 putchar(bh);
 }
 putchar('\n');
