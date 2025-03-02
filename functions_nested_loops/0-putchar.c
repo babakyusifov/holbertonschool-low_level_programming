@@ -1,10 +1,11 @@
 #include <stdio.h>
+
 /**
- * main - Prints _putchar, followed by a new line.
+ * main.h - Prints _putchar, followed by a new line.
  * Return: 0
  */
 
-int main(void)
+int main()
 {
 printf("_putchar\n");
 return (0);
