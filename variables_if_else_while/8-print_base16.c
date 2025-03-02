@@ -7,12 +7,14 @@
 int main(void)
 {
 int num = 0;
-for (; num < 16; num++)
+for (; num < 10; num++)
 {
-if (num < 10)
 putchar(num + '0');
-else
-putchar(num - 10 + 'a');
+if (num < 9)
+{
+putchar (',');
+putchar (' ');
+}
 }
 putchar('\n');
 return (0);
