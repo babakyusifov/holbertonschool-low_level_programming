@@ -1,9 +1,19 @@
 #include "main.h"
 
 /**
- * main - Prints the alphabet in lowercase followed by a new line.
+ *main - Entry point of the program.
+ *Return: 0
+ */
+int main(void)
+{
+print_alphabet();
+return (0);
+}
+
+/**
  * print_alphabet - Prints the alphabet in lowercase followed by a new line.
- * Return: 0
+ *
+ * Description: This function iterates through the lowercase alphabet
  */
 void print_alphabet(void)
 {
