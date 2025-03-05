@@ -1,3 +1,6 @@
+#include <stdio.h>
+
+// Declaration of the _isdigit function
 int mul(int a, int b);
 
 int main(void)
