@@ -1,3 +1,4 @@
+void print_most_numbers(void);
 /**
  * main - check the code
  *
