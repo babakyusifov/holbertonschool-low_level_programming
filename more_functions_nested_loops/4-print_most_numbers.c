@@ -13,7 +13,7 @@ char numbers[] = "01356789";
 int i = 0;
 while (numbers[i] != '\0')
 {
-_putchar(numbers [i]);
+_putchar(numbers[i]);
 i++;
 }
 _putchar('\n');
