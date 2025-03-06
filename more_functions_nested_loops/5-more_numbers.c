@@ -11,21 +11,12 @@
 void more_numbers(void)
 {
 int i, j;
+char nums[] = "01234567891011121314\n";
 for (j = 0; j < 10; j++)
 {
-for (i = 0; i <= 14; i++)
+for (i = 0; nums[i] != '\0'; i++)
 {
-if (i < 10)
-{
-_putchar('0' + i);
-}
-else
-{
-_putchar('1');
-_putchar('0' + (i - 10));
+_putchar(nums[i]);
 }
 }
-_putchar('\n');
 }
-}
-
