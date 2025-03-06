@@ -1,8 +1,7 @@
-void print_most_numbers(void);  // Declaration
-
+#include "main.h"
 int main(void)
 {
-    print_most_numbers();  // Function call
-    return 0;
+print_most_numbers();
+return 0;
 }
 
