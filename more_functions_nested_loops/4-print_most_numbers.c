@@ -10,7 +10,7 @@
 
 void print_numbers(void)
 {
-char numbers[] = "01356789";
+char numbers[] = "0124356789";
 int i = 0;
 while (numbers[i] != '\0')
 {
