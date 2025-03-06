@@ -10,13 +10,12 @@
 
 void print_numbers(void)
 {
-char numbers[] = "0124356789";
 int i = 0;
-while (numbers[i] != '\0')
+while (i <= 9)
 {
-if (numbers[i] != 2 && numbers[i] != 4)
+if (i != 2 && i != 4)
 {
-putchar('0' + numbers[i]);
+putchar('0' + i);
 }
 i++;
 }
