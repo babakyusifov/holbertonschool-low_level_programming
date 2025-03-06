@@ -14,7 +14,10 @@ char numbers[] = "0124356789";
 int i = 0;
 while (numbers[i] != '\0')
 {
-_putchar(numbers[i]);
+if (numbers[i] != 2 && numbers[i] != 4)
+{
+putchar('0' + numbers[i]);
+}
 i++;
 }
 _putchar('\n');
