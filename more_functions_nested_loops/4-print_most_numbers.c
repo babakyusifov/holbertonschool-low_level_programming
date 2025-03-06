@@ -9,13 +9,11 @@
 
 void print_most_numbers(void)
 {
+char numbers[] = "01356789";
 int i = 0;
-while (i <= 9)
+while (numbers[i] != '\0')
 {
-if (i != 2 && i != 4)
-{
-putchar('0' + i);
-}
+_putchar(numbers [i]);
 i++;
 }
 _putchar('\n');
