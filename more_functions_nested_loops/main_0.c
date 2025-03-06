@@ -1,13 +1,8 @@
-#include <stdio.h>
-
-// Declaration of the _isupper function
-int _isupper(int c);
+void print_most_numbers(void);  // Declaration
 
 int main(void)
 {
-char test_char = 'A';
-printf("%d\n", _isupper(test_char));
-test_char = 'a';
-printf("%d\n", _isupper(test_char));
-return (0);
+    print_most_numbers();  // Function call
+    return 0;
 }
+
