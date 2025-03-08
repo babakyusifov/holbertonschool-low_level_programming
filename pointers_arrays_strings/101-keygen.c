@@ -9,21 +9,20 @@ int main(void)
     char password[PASSWORD_LENGTH + 1];  /* +1 for the null terminator */
     int i;
 
-    // Seed the random number generator
+    /* Seed the random number generator */
     srand(time(NULL));
 
-    // Generate a random password
+    /* Generate a random password */
     for (i = 0; i < PASSWORD_LENGTH; i++) {
-        // Generate a random printable ASCII character (from 'A' to 'Z')
-        password[i] = (rand() % 26) + 'A';  // You can modify this range as per requirements
+        /* Generate a random printable ASCII character (from 'A' to 'Z') */
+        password[i] = (rand() % 26) + 'A';  /* You can modify this range as per requirements */
     }
 
-    // Null-terminate the password string
+    /* Null-terminate the password string */
     password[PASSWORD_LENGTH] = '\0';
 
-    // Print the generated password
+    /* Print the generated password */
     printf("%s\n", password);
 
-    return 0;
+    return (0);
 }
-
