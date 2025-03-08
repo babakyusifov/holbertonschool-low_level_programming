@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    char password[PASSWORD_LENGTH + 1];  // +1 for the null terminator
+    char password[PASSWORD_LENGTH + 1];  /* +1 for the null terminator */
     int i;
 
     // Seed the random number generator
@@ -14,7 +14,7 @@ int main(void)
 
     // Generate a random password
     for (i = 0; i < PASSWORD_LENGTH; i++) {
-        // Generate a random printable ASCII character (from 'a' to 'z' and 'A' to 'Z')
+        // Generate a random printable ASCII character (from 'A' to 'Z')
         password[i] = (rand() % 26) + 'A';  // You can modify this range as per requirements
     }
 
@@ -24,5 +24,6 @@ int main(void)
     // Print the generated password
     printf("%s\n", password);
 
-	return 0;
+    return 0;
 }
+
