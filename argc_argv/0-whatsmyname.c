@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+int _putchar(char c);
+
 /**
  *main - a program that prints its name, followed by a new line.
  *@argv:is an array of strings containing the command-line arguments.
