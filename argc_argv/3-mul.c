@@ -10,24 +10,24 @@
  */
 int main(int argc, char *argv[])
 {
-    int num1, num2, result;
+int num1, num2, result;
 
     /* Check if exactly two arguments are passed */
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (1);
-    }
+if (argc != 3)
+{
+printf("Error\n");
+return (1);
+}
 
     /* Convert arguments to integers */
-    num1 = atoi(argv[1]);
-    num2 = atoi(argv[2]);
+num1 = atoi(argv[1]);
+num2 = atoi(argv[2]);
 
     /* Multiply the numbers */
-    result = num1 * num2;
+result = num1 *num2;
 
     /* Print the result */
-    printf("%d\n", result);
+printf("%d\n", result);
 
-    return (0);
+return (0);
 }
