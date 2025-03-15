@@ -17,8 +17,11 @@ char *leet(char *);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n);3
+char *_strpbrk(char *s, char *accept);
+char *_strstr(char *haystack, char *needle);
 int _strcmp(char *s1, char *s2);
+char *_strchr(char *s, char c);
 int _atoi(char *s);
 int _putchar(char c);
 
