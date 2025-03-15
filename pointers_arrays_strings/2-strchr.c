@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strchr - check the code
  * @s: - s
@@ -24,3 +25,4 @@ else
 return (NULL);
 }
 }
+
