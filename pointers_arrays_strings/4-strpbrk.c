@@ -11,20 +11,21 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-    while (*s)
-    {
-        char *a = accept;
-        while (*a)
-        {
-            if (*s == *a)
-            {
-                return (s);
-            }
-            a++;
-        }
-        s++;
-    }
+	while (*s)
+	{
+		char *a = accept;
 
-    /* If no match is found, return NULL */
-    return (NULL);
+		while (*a)
+		{
+			if (*s == *a)
+			{
+				return (s);
+			}
+			a++;
+		}
+		s++;
+	}
+
+	/* If no match is found, return NULL */
+	return (NULL);
 }
