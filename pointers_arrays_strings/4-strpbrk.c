@@ -1,24 +1,30 @@
 #include "main.h"
-#include <stddef.h> 
+#include <stddef.h> /* Include this for NULL */
+
 /**
- * _strpbrk - check the code
- * @s: - s
- * @accept: - var
- * Return: Always 0.
+ * _strpbrk - Searches a string for any of a set of bytes.
+ * @s: The string to search.
+ * @accept: The set of bytes to search for.
+ *
+ * Return: A pointer to the byte in s that matches one of the bytes in accept,
+ *         or NULL if no such byte is found.
  */
 char *_strpbrk(char *s, char *accept)
 {
-int i;
-while (*s)
-{
-for (i = 0; accept[i]; i++)
-{
-if (accept[i] == *s)
-{
-return (s);
-}
-}
-s++;
-}
-return (NULL);
+    while (*s)
+    {
+        char *a = accept;
+        while (*a)
+        {
+            if (*s == *a)
+            {
+                return (s);
+            }
+            a++;
+        }
+        s++;
+    }
+
+    /* If no match is found, return NULL */
+    return (NULL);
 }
