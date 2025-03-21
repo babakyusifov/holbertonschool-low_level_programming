@@ -2,40 +2,69 @@
 #include <stdlib.h>
 
 /**
- * new_dog - entry point
- * @name: string from main, name of pet
- * @age: number from main, age of pet
- * @owner: string from main, owner of pet
- * Return: pointer to the new dog_t struct
+ * _strdup - creates a duplicate of a string
+ * @str: the string to duplicate
+ * Return: pointer to the duplicated string or NULL if it fails
+ */
+char *_strdup(char *str)
+{
+    char *dup;
+    size_t len = 0, i;
+
+    if (str == NULL)
+        return (NULL);
+
+    /* Calculate string length */
+    while (str[len])
+        len++;
+
+    /* Allocate memory for duplicate */
+    dup = malloc((len + 1) * sizeof(char));
+    if (dup == NULL)
+        return (NULL);
+
+    /* Copy characters */
+    for (i = 0; i <= len; i++)
+        dup[i] = str[i];
+
+    return (dup);
+}
+
+/**
+ * new_dog - creates a new dog_t structure
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ * Return: pointer to the new dog_t structure or NULL if it fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    dog_t *p;
+    dog_t *dog;
 
-    /* Allocate memory for struct */
-    p = malloc(sizeof(dog_t));
-    if (p == NULL)
+    /* Allocate memory for the dog structure */
+    dog = malloc(sizeof(dog_t));
+    if (dog == NULL)
         return (NULL);
 
-    /* Duplicate and assign name */
-    p->name = _strdup(name);
-    if (p->name == NULL)
+    /* Duplicate name */
+    dog->name = _strdup(name);
+    if (dog->name == NULL)
     {
-        free(p);
+        free(dog);
         return (NULL);
     }
 
-    /* Duplicate and assign owner */
-    p->owner = _strdup(owner);
-    if (p->owner == NULL)
+    /* Duplicate owner */
+    dog->owner = _strdup(owner);
+    if (dog->owner == NULL)
     {
-        free(p->name);
-        free(p);
+        free(dog->name);
+        free(dog);
         return (NULL);
     }
 
     /* Assign age */
-    p->age = age;
+    dog->age = age;
 
-    return (p);
+    return (dog);
 }
