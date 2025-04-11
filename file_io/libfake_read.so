@@ -1,0 +1,16 @@
+#define _GNU_SOURCE
+#include <dlfcn.h>
+#include <unistd.h>
+#include <errno.h>
+#include <stdio.h>
+
+ssize_t read(int fd, void *buf, size_t count) {
+    static ssize_t (*real_read)(int, void *, size_t) = NULL;
+    if (!real_read)
+        real_read = dlsym(RTLD_NEXT, "read");
+
+    // Simulate a failure in read by setting errno and returning -1
+    errno = EIO;  // Set an I/O error
+    return -1;    // Fail the read
+}
+
